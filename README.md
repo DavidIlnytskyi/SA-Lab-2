@@ -91,5 +91,8 @@ docker run --rm --network hazelcast-network -p 8080:8080 hazelcast/management-ce
 ![Task-4-results](./images/Task-4-Results.png)
 
 
-## 5. Distibuted map with pessimistic locks 
+## 5. Distributed map with pessimistic locks 
 ![Task-5-results](./images/Task-5-Results.png)
+
+## 6. Distributed map with optimistic locks
+![Task-6-results](./images/Task-6-Results.png)
