@@ -1,6 +1,6 @@
 # SA-Lab-2
 
-## Docker setup
+## 1-2 Docker setup
 
 **Create network**
 ```
@@ -40,3 +40,49 @@ docker run --rm -v "$(pwd)"/hazelcast-docker.xml:/opt/hazelcast/hazelcast-docker
   -p 5703:5701 \
   hazelcast/hazelcast:latest
 ```
+
+**Managment center:**
+```
+docker run --rm --network hazelcast-network -p 8080:8080 hazelcast/management-center 
+```
+
+
+## 3. Distributed Map
+
+**Python code:**\
+![Task-3-Code](./images/Task-3-Code.png)
+
+
+**Output:**\
+![Task-3-cmd](./images/Task-3-cmd.png)
+
+**Managment center statistics::**\
+![Task-3-Linex](./images/Task-3-Data-1-Lines.png)
+![Task-3-Plots](./images/Task-3-Data-1-Plots.png)
+
+### Clusters removing(`kill -9 <pid>`):
+- 1 cluster:   
+![Task-3-Lines](./images/Task-3-Data-Kill-One-Lines.png)
+![Task-3-Plots](./images/Task-3-Data-Kill-One-Plots.png)
+    - no data loss
+    ![Task-3-Data-Loss](./images/Task-3-Data-Kill-One-No-Loss.png)
+
+- 2 clusters sequentially:
+![Task-3-Lines](./images/Task-3-Data-Kill-Two-Seq-Lines.png)
+![Task-3-Plots](./images/Task-3-Data-Kill-Two-Seq-Plots.png)
+    - data loss
+    ![Task-3-Data-Loss](./images/Task-3-Data-Kill-Two-Data-Loss.png)
+
+- 2 clusters simultaneously:
+![Task-3-Lines](./images/Task-3-Data-Kill-Two-Simul-Lines.png)
+![Task-3-Plots](./images/Task-3-Data-Kill-Two-Simul-Plots.png)
+    - data loss
+    ![Task-3-Data-Loss](./images/Task-3-Data-Kill-Two-Simul-Data-Loss.png)
+
+**Так, втрата даних є.**
+
+Шляхи уникнення втрати даних:
+- use back-up copies
+- enable persistance
+
+## Distributed Map without locks
