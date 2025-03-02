@@ -107,3 +107,4 @@ docker run --rm --network hazelcast-network -p 8080:8080 hazelcast/management-ce
 **Заранити 1 producer  і 2 consumer's**
 ![Task-8-Results](./images/Task-8-Results.png)
 Значення вичитуються послідовно.
+При виключенні consumer'ів і заповненні черги даними клієнт завершує свою роботу.
