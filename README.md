@@ -96,3 +96,9 @@ docker run --rm --network hazelcast-network -p 8080:8080 hazelcast/management-ce
 
 ## 6. Distributed map with optimistic locks
 ![Task-6-results](./images/Task-6-Results.png)
+
+## 7. Compare results
+**Без блокувань спостерігаються втрати даних.\
+Оптимістичний та песимістичний блокування працюють приблизно однаково, з незначною перевагою в сторону песимістичного.**
+
+## 8. Bounded Queue
