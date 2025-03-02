@@ -85,4 +85,7 @@ docker run --rm --network hazelcast-network -p 8080:8080 hazelcast/management-ce
 - use back-up copies
 - enable persistance
 
-## Distributed Map without locks
+## 4. Distributed Map without locks
+
+
+![Task-4-results](./images/Task-4-Results.png)
