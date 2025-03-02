@@ -16,4 +16,8 @@
             </tcp-ip>
         </join>
     </network>
+
+    <queue name="bounded-queue">
+        <max-size>10</max-size>
+    </queue>
 </hazelcast>

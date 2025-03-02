@@ -102,3 +102,8 @@ docker run --rm --network hazelcast-network -p 8080:8080 hazelcast/management-ce
 Оптимістичний та песимістичний блокування працюють приблизно однаково, з незначною перевагою в сторону песимістичного.**
 
 ## 8. Bounded Queue
+**Створити Bounded-Queue**
+
+**Заранити 1 producer  і 2 consumer's**
+![Task-8-Results](./images/Task-8-Results.png)
+Значення вичитуються послідовно.
